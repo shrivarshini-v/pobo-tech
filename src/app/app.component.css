@@ -1,0 +1,36 @@
+/* Main container to hold both side-profile and other content */
+.main-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: flex-start; /* Keep everything left-aligned */
+    padding: 20px; /* Add some padding */
+    gap: 20px; /* Space between left and right sections */
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left section for side profile */
+.left-section {
+    flex: 0 0 270px; /* Fixed width for side profile */
+    max-width: 270px;
+}
+
+/* Right section to take the remaining space */
+.right-section {
+    flex: 1; /* Takes remaining width */
+    min-width: 0; /* Ensures responsiveness */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center align in small screens */
+    }
+
+    .left-section, 
+    .right-section {
+        width: 100%;
+        max-width: none;
+    }
+}

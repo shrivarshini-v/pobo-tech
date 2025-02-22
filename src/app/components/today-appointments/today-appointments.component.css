@@ -1,0 +1,418 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: inter;
+    margin-top: -15px;
+    /* Adjust as needed */
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e9dfdf;
+}
+
+.header h2 {
+    margin: 0;
+    /* Removes default margin */
+    font-family: inter;
+}
+
+.header .refresh-btn,
+.header .today-btn {
+    margin-left: 10px;
+    /* Adds spacing between buttons */
+}
+
+.header .buttons {
+    display: flex;
+    align-items: center;
+    font-family: inter;
+}
+
+.refresh-btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid orangered;
+    color: orangered;
+    background: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inter;
+    transition: 0.3s;
+}
+
+.refresh-btn i {
+    margin-right: 5px;
+}
+
+.refresh-btn:hover {
+    background: orangered;
+    color: white;
+}
+
+/* Today Button */
+.today-btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    color: #333;
+    background: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inter;
+    transition: 0.3s;
+}
+
+.today-btn i {
+    margin-left: 5px;
+}
+
+.today-btn:hover {
+    background: #f0f0f0;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.appointment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: inter;
+    height: 65px;
+    margin-top: 15px;
+}
+
+.inprogress {
+    background-color: orangered;
+    /* Orange color */
+    color: white;
+    /* White text */
+    padding: 6px 12px;
+    /* Adjust padding */
+    border-radius: 12px;
+    /* Rounded corners */
+    border: none;
+    /* Remove border */
+    font-weight: bold;
+    /* Bold text */
+    font-size: 14px;
+    font-family: inter;
+    /* Adjust font size */
+    display: inline-block;
+    /* Keep it inline */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: orangered;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: inter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px solid orangered;
+}
+
+.name-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-section-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-section-2 i {
+    margin-right: 20px;
+    /* Adjust spacing */
+    color: #555;
+    font-size: 16px;
+    /* Optional: Adjust icon color */
+}
+
+.id {
+    font-size: 12px;
+    color: blue;
+}
+
+.name {
+    margin: 2px 0 0;
+    font-size: 16px;
+    font-family: inter;
+    font-weight: bold;
+}
+
+.details {
+    text-align: left;
+    font-family: inter;
+}
+
+.details span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    font-family: inter;
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    font-family: inter;
+    font-size: 14px;
+    padding: 5px 0;
+    flex-direction: row;
+    align-items: end;
+    font-weight: 500;
+    margin: 20px 0px 20px;
+}
+
+.actionss {
+    display: flex;
+    justify-content: end;
+    font-family: inter;
+    font-size: 14px;
+    padding: 5px 0;
+    flex-direction: column;
+    align-items: end;
+    font-weight: 500;
+}
+
+.status {
+    padding: 2px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-family: inter;
+    height: 20px;
+}
+
+.In-progress {
+    padding: 2px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: orangered;
+    color: white;
+    font-family: inter;
+    height: 20px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: inter;
+}
+
+.accept {
+    color: green;
+}
+
+.reject {
+    color: #bf2254;
+}
+
+.missed {
+    color: orange;
+}
+
+.start {
+    color: black;
+}
+
+.appointment-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    flex-direction: row;
+    height: 175px;
+    justify-content: space-between;
+    /* Distributes sections evenly */
+    align-items: flex-start;
+    /* Aligns content at the top */
+    gap: 20px;
+    /* Adds spacing between columns */
+}
+
+.name-section-2,
+.appointment-details,
+.status-2 {
+    flex: 1;
+    /* Makes each section take equal width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    color: #555;
+}
+
+.user-name {
+    font-weight: bold;
+    font-family: inter;
+    color: orangered;
+}
+
+.contact-info span {
+    display: block;
+    font-size: 14px;
+    font-family: inter;
+    color: #555;
+}
+
+.appointment-details {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    color:#555;
+    /* Adjust as needed */
+}
+
+.appointment-details i {
+    margin-right: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.appointment-details span {
+    margin-left: 10px;
+    text-align: left;
+    font-family: inter;
+}
+
+.name-section-2 span {
+    margin-left: 10px;
+    text-align: left;
+    font-family: inter;
+}
+
+.status-2 {
+    margin: 10px 0;
+    font-size: 14px;
+    font-family: inter;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-2 i {
+    margin-right: 8px;
+    /* Adjust spacing */
+    color: #555;
+    font-size: 16px;
+    /* Optional: Adjust icon color */
+    /* font-size: 18px; */
+}
+
+.status-2 span{
+    margin-left: 10px;
+}
+.booked-app {
+    color: 007bff;
+    font-weight: bold;
+    font-family: inter;
+}
+
+.completed{
+    color: #10bd10;
+}
+
+.payment {
+    color: #555;
+    font-weight: bold;
+    font-family: inter;
+}
+
+.accept-1 {
+    color: green;
+}
+
+.reject-1 {
+    color: #bf2254;
+}
+
+.open-now{
+    color:#007bff;
+}
+.missed-1 {
+    color: orange;
+}
+
+.actions>a {
+    font-size: 15px;
+    font-family: inter;
+    border-right: 1px solid #c9c1c1;
+    padding: 0 16px;
+}
+
+.actionss>.buttons>a {
+    font-size: 15px;
+    font-family: inter;
+    border-right: 1px solid #c9c1c1;
+    padding: 0 16px;
+}
+
+.actions>.completed {
+    border-right: none;
+}
+
+.actionss>.buttons>.start {
+    border-right: none;
+    padding-right: 0;
+}
+
+.actionss .buttons a {
+    text-decoration: underline;
+}
+
+.actions a {
+    text-decoration: underline;
+}
+
+.common-card {
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 20px;
+    justify-content: space-between;
+
+}
