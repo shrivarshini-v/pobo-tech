@@ -1,47 +1,116 @@
-/* Reset */
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Header */
-.header {
+    font-family: inter;;
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f8fafc;
-    padding: 15px 30px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #002D74;
-}
-
-.highlight {
-    color: orangered;
-}
-
-.nav{
-    font-family: inter;
-}
-.nav ul {
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  ul {
     display: flex;
     list-style: none;
-    gap: 20px;
-}
-
-.nav a {
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-right: 20px;
+  }
+  ul li span {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+nav a {
     text-decoration: none;
-    color: black;
     font-size: 15px;
 }
 
-.nav a.active {
-    color: orangered;
+nav li.active, nav a.active {
+    color: orangered !important;
+} 
+
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    color: red;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    nav{
+      top: 0;
+      position: sticky;
+      background: #fff;
+      z-index: 999;
+    }
+    .checkbtn {
+      display: block;
+    }
+  
+    ul {
+      position: fixed;
+      top: 55px;
+      left: -100%;
+      background-color: #f9f9f9;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
+  
+    ul li {
+      margin: 20px 0;
+    }
+  
+    ul li a {
+      font-size: 20px;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+      z-index: 99;
+    }
+  }
+
+.content {
+    background: #E6ECF2;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 15px;
+}
+
+.content h1 {
+    font-size: 30px;
+    color: #1F2D3D;
+    font-family: inter;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #5C6B73;
+    font-family: inter;
+    font-size: 13px;
+    margin: 0px 0px 30px;
 }
 
 .profile {
@@ -55,32 +124,4 @@
 }
 .profile span > i{
     font-size: 12px;
-}
-.nav > ul> span{
-    margin-top: 2px;
-    margin-left: -13px;
-    font-size: 12px;
-}
-
-/* Content */
-.content {
-    background: #E6ECF2;
-    text-align: center;
-    padding: 40px;
-    height: 150px;
-    align-content: center;
-    margin-bottom: 15px;
-}
-
-.content h1 {
-    font-size: 30px;
-    color: #1F2D3D;
-    font-family: inter;
-}
-
-.content p {
-    color: #5C6B73;
-    font-family: inter;
-    font-size: 13px;
-    margin-top: 10px;
 }

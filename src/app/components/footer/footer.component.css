@@ -1,27 +1,36 @@
 /* Footer Styling */
+@media (min-width: 1024px) {
+.w-25{
+    width:25% 
+}
+.w-50{
+    width:50%;
+}
+.d-flex{
+    display: flex;
+}
+.footer-container {
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+}
+.footer-container{
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+    padding: 30px 40px;
+}
 .footer {
     background-color: #33333308;
     color: black;
-    padding-top: 40px;
-    padding-bottom: 0;
     text-align: center;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    gap: 150px;
+    font-size: 14px;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
+    text-align: left; 
 }
 
 .footer-section h2,
@@ -45,7 +54,6 @@
 .footer-section > .social-icons > a:hover {
     text-decoration: none;
 }
-/* Newsletter Form */
 .newsletter-form {
     display: flex;
     gap: 10px;
@@ -54,7 +62,7 @@
 
 .newsletter-form input {
     padding: 10px;
-    width: 250px;
+    width: auto;
     border: 1px solid #e9dfdf;
     border-radius: 5px;
     font-size: 16px;
@@ -78,10 +86,8 @@
     background-color: #e54b00;
 }
 
-/* Social Icons */
 .social-icons {
     display: flex;
-    justify-content: center;
     gap: 15px;
     margin-top: 15px;
 }
@@ -104,24 +110,21 @@
     font-size: 20px;
     color: #333;
 }
+
+
 .footer-bottom {
     background-color: #3333330a;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     color: #7a7a7a;
-    padding: 0 30px;
+    padding: 10px 30px;
     font-size: 14px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 15px;
 }
 
 .footer-links a {
     text-decoration: none;
     color: #7a7a7a;
+    margin: 0px 10px;
 }
 
 .footer-links a:hover {
@@ -144,24 +147,4 @@
 .contact-info i {
     color: #000;
     font-size: 16px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-
-    .newsletter-form {
-        align-items: center;
-    }
-
-    .newsletter-form input {
-        width: 80%;
-    }
 }
