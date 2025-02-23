@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 .side-profile {
-    max-width: 270px;
     width: 100%;
     background: #fff;
     border-radius: 12px;
@@ -165,20 +164,9 @@ span.list {
     color: #333;
 }
 
-@media (max-width: 1024px) {
-    .side-profile {
-        width: 90%;
-        max-width: 300px;
-    }
-}
 
 @media (max-width: 768px) {
-    .side-profile {
-        width: 100%;
-        max-width: 320px;
-        padding: 15px 0;
-    }
-
+   
     .profile-header {
         height: 110px;
     }

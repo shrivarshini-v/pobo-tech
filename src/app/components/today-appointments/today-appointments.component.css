@@ -1,13 +1,13 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-family: inter;
-    margin-top: -15px;
-    /* Adjust as needed */
+@media (min-width:768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        font-family: inter;
+        margin-top: -15px;
+    }
 }
-
 hr {
     border: none;
     height: 1px;
@@ -16,20 +16,18 @@ hr {
 
 .header h2 {
     margin: 0;
-    /* Removes default margin */
     font-family: inter;
 }
 
-.header .refresh-btn,
-.header .today-btn {
+.today-btn {
     margin-left: 10px;
-    /* Adds spacing between buttons */
 }
 
 .header .buttons {
     display: flex;
     align-items: center;
     font-family: inter;
+    margin: 15px 0;
 }
 
 .refresh-btn {
@@ -55,7 +53,6 @@ hr {
     color: white;
 }
 
-/* Today Button */
 .today-btn {
     display: inline-flex;
     align-items: center;
@@ -90,8 +87,13 @@ hr {
     width: 100%;
 }
 
+@media (min-width:768px) {
+    .appointment {
+        display: flex;
+    }
+}
+
 .appointment {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
@@ -99,28 +101,20 @@ hr {
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     font-family: inter;
-    height: 65px;
+    height: auto;
     margin-top: 15px;
 }
 
 .inprogress {
     background-color: orangered;
-    /* Orange color */
     color: white;
-    /* White text */
     padding: 6px 12px;
-    /* Adjust padding */
     border-radius: 12px;
-    /* Rounded corners */
     border: none;
-    /* Remove border */
     font-weight: bold;
-    /* Bold text */
     font-size: 14px;
     font-family: inter;
-    /* Adjust font size */
     display: inline-block;
-    /* Keep it inline */
 }
 
 .user-info {
@@ -156,10 +150,8 @@ hr {
 
 .name-section-2 i {
     margin-right: 20px;
-    /* Adjust spacing */
     color: #555;
     font-size: 16px;
-    /* Optional: Adjust icon color */
 }
 
 .id {
@@ -177,6 +169,7 @@ hr {
 .details {
     text-align: left;
     font-family: inter;
+    margin: 15px 0;
 }
 
 .details span {
@@ -185,9 +178,17 @@ hr {
     color: #555;
     font-family: inter;
 }
-
+@media (max-width:768px) {
+    .actions , .buttons{
+        display: block;
+    }
+    .actions > a, .buttons > a{
+        margin: 10px 0;
+        display: inline-block;
+    }
+}
+@media (min-width:768px) {
 .actions {
-    display: flex;
     justify-content: end;
     font-family: inter;
     font-size: 14px;
@@ -196,8 +197,8 @@ hr {
     align-items: end;
     font-weight: 500;
     margin: 20px 0px 20px;
+    display: flex;
 }
-
 .actionss {
     display: flex;
     justify-content: end;
@@ -208,7 +209,12 @@ hr {
     align-items: end;
     font-weight: 500;
 }
-
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+}
 .status {
     padding: 2px 10px;
     font-weight: bold;
@@ -227,12 +233,6 @@ hr {
     color: white;
     font-family: inter;
     height: 20px;
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .buttons a {
@@ -264,24 +264,18 @@ hr {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     flex-direction: row;
-    height: 175px;
+    height: auto;
     justify-content: space-between;
-    /* Distributes sections evenly */
     align-items: flex-start;
-    /* Aligns content at the top */
     gap: 20px;
-    /* Adds spacing between columns */
 }
 
 .name-section-2,
 .appointment-details,
 .status-2 {
     flex: 1;
-    /* Makes each section take equal width */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     flex-wrap: wrap;
     color: #555;
 }
@@ -304,7 +298,6 @@ hr {
     flex-direction: column;
     width: 300px;
     color:#555;
-    /* Adjust as needed */
 }
 
 .appointment-details i {
@@ -326,7 +319,6 @@ hr {
 }
 
 .status-2 {
-    margin: 10px 0;
     font-size: 14px;
     font-family: inter;
     display: flex;
@@ -335,11 +327,8 @@ hr {
 
 .status-2 i {
     margin-right: 8px;
-    /* Adjust spacing */
     color: #555;
     font-size: 16px;
-    /* Optional: Adjust icon color */
-    /* font-size: 18px; */
 }
 
 .status-2 span{
@@ -376,21 +365,21 @@ hr {
     color: orange;
 }
 
-.actions>a {
+.actions > a {
     font-size: 15px;
     font-family: inter;
     border-right: 1px solid #c9c1c1;
     padding: 0 16px;
 }
 
-.actionss>.buttons>a {
+.actionss>.buttons > a {
     font-size: 15px;
     font-family: inter;
     border-right: 1px solid #c9c1c1;
     padding: 0 16px;
 }
 
-.actions>.completed {
+.actions > .completed {
     border-right: none;
 }
 
@@ -407,12 +396,27 @@ hr {
     text-decoration: underline;
 }
 
+@media (min-width:768px) {
+    .common-card {
+        display: flex;
+    }
+}
 .common-card {
-
-    display: flex;
     flex-direction: row;
     margin-bottom: 20px;
     gap: 20px;
     justify-content: space-between;
+}
 
+.name-section-2 > div{
+    margin-bottom: 25px;
+}
+.appointment-details > div{
+    margin-bottom: 25px;
+}
+.status-2 > div{
+    margin-bottom: 25px;
+}
+.mb-5{
+    margin-bottom:5px;
 }
