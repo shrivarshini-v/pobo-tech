@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/doctor-request",
             "index": "src/index.html",
+            "baseHref": "/pobo-tech/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
