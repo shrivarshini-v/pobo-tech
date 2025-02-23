@@ -32,5 +32,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
+          force: true
+          clean: true
           folder: dist/doctor-request # Replace with your Angular project's output folder
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
